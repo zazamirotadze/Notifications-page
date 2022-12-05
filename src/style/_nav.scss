@@ -1,0 +1,39 @@
+@import "./mixins";
+.nav{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+ 
+    justify-content: space-between;
+    padding: 25px 0 ;
+    @include respond(mini-phone) {
+        flex-direction:column;
+    }
+    
+    &__part-1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        font-weight: bold;
+        width: 205px;
+        font-family: extraBoldJakarta;
+        & div{
+            background-color: $Blue;
+            color: $White;
+            width: 28px;
+            height: 25px;
+            text-align: center;
+            border-radius: 5px;
+           
+        }
+    }
+    &__part-2{
+        font-family: mediumBold;
+        color: $Darkgrayishblue;
+        &:hover,&:active{
+            color: $Blue;
+            @include make-blue;
+        }
+    }
+}
